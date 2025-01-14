@@ -1,0 +1,26 @@
+{% block content %}
+  <h1>Article</h1>
+  <ul>
+    {% for article in article_list %}
+      <li>
+        <a href="{% url 'article_detail' article.pk %}">{{ article.headline }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+
+</head>
+<body>
+<hr>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/mvt/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>
+
+</body>
+</html>

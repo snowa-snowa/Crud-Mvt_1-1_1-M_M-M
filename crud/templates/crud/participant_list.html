@@ -1,0 +1,17 @@
+<h1>Participants</h1>
+<a style="font-size:150%; font-family:verdana;" href="{% url 'participant_create' %}">Add participant</a>
+<hr>
+<ol>
+    {% for participant in participants %}
+        <li>
+            <p>Name - {{ participant.name }}</p>
+            <a href="{% url 'participant_detail' participant.pk %}">-detail</a>
+            <a href="{% url 'participant_update' participant.pk %}">-edit</a>
+            <a href="{% url 'participant_delete' participant.pk %}">-delete</a>
+            <hr>
+        </li>
+    {% endfor %}
+</ol>
+<a style="font-size:120%; font-family:verdana;" href="{% url 'event_list' %}">Events</a>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/crud/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

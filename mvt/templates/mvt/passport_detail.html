@@ -1,0 +1,8 @@
+{% block content %}
+  <h1 style="font-size:120%; font-family:verdana;">Passport {{ passport_number.pk }}</h1>
+  <p style="font-size:120%; font-family:verdana;">Number: {{ passport_number.passport_number }}</p>
+  <p style="font-size:120%; font-family:verdana;">Person: {{ passport_number.person.first_name }}{{}}</p>
+{% endblock %}
+<hr>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/passport/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit student / Add student</title>
+</head>
+<body>
+    <h1>Edit student / Add student</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <br>
+    <a style="font-size:120%; font-family:verdana;" href="{% url 'student_list' %}">Students</a>
+    <pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/crud/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>
+</body>
+</html>

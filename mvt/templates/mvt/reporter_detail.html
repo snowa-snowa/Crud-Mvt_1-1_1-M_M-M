@@ -1,0 +1,26 @@
+{% block content %}
+  <h1>{{ reporter.last_name }} {{ reporter.first_name }}</h1>
+  <h2>Article</h2>
+  <ul>
+    {% for article in reporter.article_set.all %}
+      <li>
+        <a href="{% url 'article_detail' article.pk %}">{{ article.headline }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+
+</head>
+<body>
+<hr>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/reporters/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>
+</body>
+</html>

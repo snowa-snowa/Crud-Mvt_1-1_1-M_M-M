@@ -1,0 +1,13 @@
+{% block content %}
+  <h1>People</h1>
+  <ul>
+    {% for person in person_list %}
+      <li>
+        <a href="{% url 'person_detail' person.pk %}">{{ person.first_name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+<hr>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/mvt/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

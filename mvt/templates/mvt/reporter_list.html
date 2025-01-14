@@ -1,0 +1,24 @@
+{% block content %}
+  <h1>Spisok Jurnalistov</h1>
+  <ul>
+    {% for reporter in reporter_list %}
+      <li>
+        <a href="{% url 'reporter_detail' reporter.pk %}">{{ reporter.first_name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+
+</head>
+<body>
+<hr>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/mvt/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>
+</body>
+</html>

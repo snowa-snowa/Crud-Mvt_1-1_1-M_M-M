@@ -1,0 +1,13 @@
+{% block content %}
+  <h1>Passport</h1>
+  <ul>
+    {% for passport in passport_list %}
+      <li>
+        <a href="{% url 'passport_detail' passport.pk %}">Passport {{ passport.pk }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+<hr>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/mvt/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

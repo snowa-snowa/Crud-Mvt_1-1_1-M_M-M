@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+</head>
+<body>
+    <h1>Courses</h1>
+    <a style="font-size:150%; font-family:verdana;" href="{% url 'course_create' %}">Add course</a>
+    <ol>
+        {% for course in courses %}
+            <li>{{ course }}</li>
+
+                <a href="{% url 'course_detail' course.pk %}">Detail</a>
+                <a href="{% url 'course_edit' course.pk %}">Edit</a>
+                <a href="{% url 'course_delete' course.pk %}">Delete</a>
+        <hr>
+        {% endfor %}
+    </ol>
+    <br>
+    <a style="font-size:120%; font-family:verdana;" href="{% url 'student_list' %}">Students</a>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/crud/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>
+</body>
+</html>

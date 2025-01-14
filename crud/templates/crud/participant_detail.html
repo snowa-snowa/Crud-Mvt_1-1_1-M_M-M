@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ participant.name }}</title>
+</head>
+<body>
+    <h3>participant id: {{ participant.id }}</h3>
+    <p>participant name: {{ participant.name }}</p>
+    <p>participant email: {{ participant.email }}</p>
+
+    <h1>Event of the participant:</h1>
+
+    <hr>
+    {% for x in participant.courses.all %}
+            <ul>{{ x.id }}. {{ x.title }}</ul>
+    <hr>
+    {% endfor %}
+    <br>
+
+    <a href="{% url 'participant_update' participant.pk %}">Edit</a>
+    <br>
+    <a href="{% url 'participant_delete' participant.pk %}">Delete</a>
+    <br>
+    <a href="{% url 'participant_list' %}">Back to List</a>
+
+<pre style="font-size:150%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>
+</body>
+</html>

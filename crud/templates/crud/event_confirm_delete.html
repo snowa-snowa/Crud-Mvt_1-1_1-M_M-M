@@ -1,0 +1,8 @@
+<h1>Delete event</h1>
+<p>Are you sure you want to delete "{{ event.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+</form>
+<a style="font-size:150%; font-family:verdana;" href="{% url 'event_list' %}">Cancel</a>
+<pre style="font-size:150%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

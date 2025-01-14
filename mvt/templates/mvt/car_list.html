@@ -1,0 +1,12 @@
+{% block content %}
+  <h1>Car Models</h1>
+  <ul>
+    {% for car in car_list %}
+      <li>
+        <a href="{% url 'car_detail' car.pk %}">{{ car.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/mvt/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

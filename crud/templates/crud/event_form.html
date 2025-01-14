@@ -1,0 +1,9 @@
+<h1>{% if form.instance.pk %}Edit{% else %}Add{% endif %} event</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a style="font-size:120%; font-family:verdana;" href="{% url 'event_list' %}">Events list</a>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/crud/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ course }}</title>
+</head>
+<body>
+    Course ID: {{ course.id }}
+    <h1>Name: {{ course.name }}</h1>
+    <h1>Description: {{ course.description }}</h1>
+
+    <h2>Students</h2>
+    <hr>
+    {% for x in course.student_set.all %}
+            <ul>{{ x.id }}. {{ student.first_name }}</ul>
+            <p>Last_name: {{ x.last_name }}</p>
+    <hr>
+    {% endfor %}
+    <br>
+    <a href="{% url 'course_edit' course.pk %}">-edit</a>
+    <br>
+    <a href="{% url 'course_delete' course.pk %}">-delete</a>
+    <br>
+    <a href="{% url 'course_list' %}">-courses</a>
+    <br>
+<pre style="font-size:150%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<h1>Event List</h1>
+<a style="font-size:150%; font-family:verdana;" href="{% url 'event_create' %}">Add event</a>
+<ol>
+    {% for event in events %}
+        <li>
+            {{ event.title }}
+            <br>
+            <strong>Participants:</strong>
+            {% for participant in event.participants.all %}
+                {{ participant.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+            <br>
+            <a href="{% url 'event_detail' event.pk %}">Detail</a>
+            <br>
+            <a href="{% url 'event_update' event.pk %}">Edit</a>
+            <br>
+            <a href="{% url 'event_delete' event.pk %}">Delete</a>
+            <br>
+            <hr>
+        </li>
+    {% endfor %}
+</ol>
+
+<br>
+<a style="font-size:120%; font-family:verdana;" href="{% url 'participant_list' %}">List of participants</a>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/crud/">Back</a></pre>
+<pre style="font-size:120%; font-family:verdana;"><a href="http://127.0.0.1:8000/">Menu</a></pre>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>-_-</title>
+       <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 0.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 50%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 18px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(10,10,10,10.1);
+        }
+        .portfolio-item {
+            margin-bottom: 15px;
+            padding: 14px;
+            background-color: #f9f9f9;
+            border: 3px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CRUD</h1>
+    </header>
+    <div class="container">
+        <div class="portfolio-item">
+            <pre style="font-size:120%; font-family:verdana;">One to one</pre>
+            <hr>
+            <pre style="font-size:105%; font-family:verdana;"><p>Models:  Book  and  Product</p></pre>
+            <hr>
+            <pre style="font-size:100%; font-family:verdana;"><a href="http://127.0.0.1:8000/books/">Books list</a>      <a href="http://127.0.0.1:8000/add/">Add book</a>      <a href="http://127.0.0.1:8000/products/list/">Products list</a>      <a href="http://127.0.0.1:8000/products/add/">Add product</a></pre>
+        </div>
+        <div class="portfolio-item">
+            <pre style="font-size:120%; font-family:verdana;">One to many</pre>
+            <hr>
+            <pre style="font-size:105%; font-family:verdana;"><p>Models:  Course  and  Student</p></pre>
+            <hr>
+            <pre style="font-size:100%; font-family:verdana;"><a href="http://127.0.0.1:8000/courses/">Courses list</a>      <a href="http://127.0.0.1:8000/courses/create/">Add course</a>      <a href="http://127.0.0.1:8000/students/">Students list</a>      <a href="http://127.0.0.1:8000/students/create/">Add student</a></pre>
+        </div>
+        <div class="portfolio-item">
+            <pre style="font-size:120%; font-family:verdana;">Many to many</pre>
+            <hr>
+            <pre style="font-size:105%; font-family:verdana;"><p>Models:  Event  and  Participant</p></pre>
+            <hr>
+            <pre style="font-size:100%; font-family:verdana;"><a href="http://127.0.0.1:8000/events/">Events list</a>      <a href="http://127.0.0.1:8000/events/create/">Add event</a>      <a href="http://127.0.0.1:8000/participants/">Participants list</a>      <a href="http://127.0.0.1:8000/participants/create/">Add participant</a></pre>
+            <hr>
+            <a style="font-size:100%; font-family:verdana;" href="http://127.0.0.1:8000/">—Back—</a>
+        </div>
+    </div>
+
+</body>
+</html>
